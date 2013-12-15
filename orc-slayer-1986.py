@@ -1,9 +1,9 @@
-#!/www/virtual/fluuzi/python/bin/python
+#!/www/your/server/here
 print "Content-Type: text/html"
 print
-print "<head><title>Orc Slayer 1986 @ Rokked</title></head>"
+print "<head><title>Orc Slayer 1986</title></head>"
 print "</head><body>"
-print "<img src=\"http://www.rokked.com/media/orc-slayer-1986.jpg\" width=\"400\"><br>"
+print "<img src=\"img/orc-slayer-1986.jpg\" width=\"400\"><br>"
 
 import sys
 import random
@@ -87,9 +87,9 @@ while loop == True:
 			startbattle = form.getfirst('start', 'None')
 			startbattle = cgi.escape(startbattle)
 			if startbattle == '1':
-				print "Hello", name,"!! <img src=\"http://www.rokked.com/media/sword.jpg\">"
+				print "Hello", name,"!! <img src=\"img/sword.jpg\">"
 				print "<br>"
-				print "You come across an Orc. <img src=\"http://www.rokked.com/media/orc.jpg\"> He does not like you.<br>"
+				print "You come across an Orc. <img src=\"img/orc.jpg\"> He does not like you.<br>"
 				print "--------------------<br>"
 				print "| Your health is", yourHealth, "<br>"
 				print "| Orc's health is", orcHealth, "<br>"
@@ -120,48 +120,48 @@ while loop == True:
 		yourHealth = newYou
 		healRandom = random.randint(1,11)
 		extraRandom = random.randint(1,25)
-		print "<img src=\"http://www.rokked.com/media/sword.jpg\"> ", name, "strikes orc for", damage
+		print "<img src=\"img/sword.jpg\"> ", name, "strikes orc for", damage
 
 		if extraRandom >= 15:
 
 			extraTotal = random.randint(15,18)
 			orcHealth = orcHealth - extraTotal
 			print "<br>"	
-			print "<img src=\"http://www.rokked.com/media/dagger.jpg\"> Sneak attack! You stun The Orc damaging him for", extraTotal, "health!"
+			print "<img src=\"img/dagger.jpg\"> Sneak attack! You stun The Orc damaging him for", extraTotal, "health!"
 		if extraRandom >= 20:
 
 			extraTotal = random.randint(11,12)
 			orcHealth = orcHealth - extraTotal
 			print "<br>"	
-			print "<img src=\"http://www.rokked.com/media/fist.jpg\"> Cheap Shot! You swung at the Orc when he wasn't ready, hitting him for", extraTotal, "health!"
+			print "<img src=\"img/fist.jpg\"> Cheap Shot! You swung at the Orc when he wasn't ready, hitting him for", extraTotal, "health!"
 		if healRandom == 7:
 
 			healTotal = random.randint(10,60)
 			yourHealth = yourHealth + healTotal	
 			print "<br>"
-			print "<img src=\"http://www.rokked.com/media/heal-you.jpg\"> With your Paladin Ninja Magic you heal yourself for", healTotal, "health!"
+			print "<img src=\"img/heal-you.jpg\"> With your Paladin Ninja Magic you heal yourself for", healTotal, "health!"
 		print "<br>"
-		print "<img src=\"http://www.rokked.com/media/orc.jpg\"> Orc mauls", name, "for", damageYou
+		print "<img src=\"img/orc.jpg\"> Orc mauls", name, "for", damageYou
 
 		if extraRandom == 1:
 
 			extraTotal = random.randint(25,50)
 			yourHealth = yourHealth - extraTotal	
 			print "<br>"
-			print "<img src=\"http://www.rokked.com/media/axe.jpg\"> Yikes! The Orc lashes out and hit you for an extra", extraTotal, "health!"		
+			print "<img src=\"img/axe.jpg\"> Yikes! The Orc lashes out and hit you for an extra", extraTotal, "health!"		
 		if healRandom == 3:
 
 			healTotal = random.randint(20,50)
 			orcHealth = orcHealth + healTotal
 			print "<br>"	
-			print "<img src=\"http://www.rokked.com/media/blood.jpg\"> The Orc rubs dirt, spit and blood into his wounds healing him for", healTotal, "health!"
+			print "<img src=\"img/blood.jpg\"> The Orc rubs dirt, spit and blood into his wounds healing him for", healTotal, "health!"
 
 	
 		if orcHealth <= 0:
 			makeTotals(1, 0)
 			battle = False
 			print "<br><br>"
-			print "<img src=\"http://www.rokked.com/media/trophy.jpg\"> You've Killed the Orc!"
+			print "<img src=\"img/trophy.jpg\"> You've Killed the Orc!"
 			print "<br>"
 			print "Congrats %s, you killed that smelly Orc!" % name
 			print "<br>"
@@ -177,7 +177,7 @@ while loop == True:
 			makeTotals(0, 1)
 			battle = False
 			print "<br><br>"
-			print "<img src=\"http://www.rokked.com/media/skull.jpg\"> You've been killed by the Orc!"
+			print "<img src=\"img/skull.jpg\"> You've been killed by the Orc!"
 			print "<br>"
 			print "Sorry %s, Game Over!" % name
 			print "<br>"
